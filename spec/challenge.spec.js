@@ -28,8 +28,7 @@ describe('Finite State Machine', function () {
   it('has an insertTicket method that transitions state to open if the Charlie Ticket has a value greater or equal to 2.25 & then subtracts 2.25 from the value', function () {
     const ticketValue = challenge.charlieTicket.value
     console.log(ticketValue)
-    console.log('THIS IS CONSOLE')
-    // expect(gate.insertTicket).to.be.a.function
+    expect(gate.insertTicket).to.be.a.function
     if (gate.insertTicket()) {
       expect(gate.state).to.equal('open')
     } else {
@@ -39,7 +38,7 @@ describe('Finite State Machine', function () {
     if (challenge.charlieTicket.value >= 2.25) {
       expect(challenge.charlieTicket.value).to.equal(ticketValue - 2.25)
     }
-    // gate.walkThrough()
+    gate.walkThrough()
   })
 
   it('has an insertTicket method that does not transition state or subtract value from charlieTicket if state is open', function () {
