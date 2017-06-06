@@ -20,6 +20,13 @@ You may wish to refer to [FAQs](https://git.generalassemb.ly/ga-wdi-boston/meta/
 
 ## Requirements
 
+Implement `SubwayGate`, a function that represents a [finite-state machine](https://en.wikipedia.org/wiki/Finite-state_machine). In this scenario our machine is the gate at the subway and can only exist in two states: `open` and `closed`. The gate only opens for the following reasons:
+-  a Charlie Card is tapped on the gate
+-  a ticket is inserted into the gate with enough money to get on the T ($2.25)
+-  a person is exiting the station
+If the gate is open, then tapping the card again will not transition the state to closed. The state transitions to closed upon a person walking through the gates.
+
+
 ## Tasks
 
 Developers should run these often!
